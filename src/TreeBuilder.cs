@@ -4,9 +4,6 @@ using System.Linq;
 
 namespace AvaliacaoParadigma
 {
-    /// <summary>
-    /// Classe que representa um nó da árvore binária
-    /// </summary>
     public class NoArvore
     {
         public int Valor { get; set; }
@@ -21,16 +18,8 @@ namespace AvaliacaoParadigma
         }
     }
 
-    /// <summary>
-    /// Classe principal para construir a árvore binária conforme as regras especificadas
-    /// </summary>
     public class ConstrutorArvore
     {
-        /// <summary>
-        /// Constrói uma árvore binária a partir de um array de inteiros
-        /// </summary>
-        /// <param name="array">Array de inteiros sem duplicidade</param>
-        /// <returns>Raiz da árvore construída</returns>
         public static NoArvore ConstruirArvore(int[] array)
         {
             if (array == null || array.Length == 0)
@@ -56,9 +45,6 @@ namespace AvaliacaoParadigma
             return raiz;
         }
 
-        /// <summary>
-        /// Constrói os galhos da esquerda em ordem decrescente
-        /// </summary>
         private static NoArvore ConstruirGalhoEsquerdo(int[] array)
         {
             if (array == null || array.Length == 0)
@@ -78,10 +64,7 @@ namespace AvaliacaoParadigma
 
             return raiz;
         }
-
-        /// <summary>
-        /// Constrói os galhos da direita em ordem decrescente
-        /// </summary>
+        
         private static NoArvore ConstruirGalhoDireito(int[] array)
         {
             if (array == null || array.Length == 0)
@@ -102,9 +85,6 @@ namespace AvaliacaoParadigma
             return raiz;
         }
 
-        /// <summary>
-        /// Insere um valor na árvore da esquerda (sempre à esquerda, em ordem decrescente)
-        /// </summary>
         private static void InserirEsquerda(NoArvore no, int valor)
         {
             if (no.Esquerda == null)
@@ -118,9 +98,6 @@ namespace AvaliacaoParadigma
             }
         }
 
-        /// <summary>
-        /// Insere um valor na árvore da direita (sempre à direita, em ordem decrescente)
-        /// </summary>
         private static void InserirDireita(NoArvore no, int valor)
         {
             if (no.Direita == null)
@@ -134,9 +111,6 @@ namespace AvaliacaoParadigma
             }
         }
 
-        /// <summary>
-        /// Imprime a árvore de forma visual (in-order traversal)
-        /// </summary>
         public static void ImprimirArvore(NoArvore raiz, string prefixo = "", bool eUltimo = true)
         {
             if (raiz == null)
@@ -159,9 +133,6 @@ namespace AvaliacaoParadigma
             }
         }
 
-        /// <summary>
-        /// Método auxiliar para imprimir a árvore em formato de travessia
-        /// </summary>
         public static void ImprimirEmOrdem(NoArvore raiz)
         {
             if (raiz != null)
