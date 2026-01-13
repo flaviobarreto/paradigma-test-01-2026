@@ -2,9 +2,6 @@ using System;
 
 namespace AvaliacaoParadigma
 {
-    /// <summary>
-    /// Classe de teste para demonstrar os cenários
-    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
